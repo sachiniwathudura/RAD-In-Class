@@ -22,10 +22,10 @@
 ////////////////////////
 
 import { useContext } from "react";
-import { CustomerContext } from "../component/CustomerProvider"; // Import CustomerContext
-import { ItemContext } from "../component/ItemProvider"; // Import ItemContext
-import { Customer } from "../model/Customer"; // Adjust the import if necessary
-import { Item } from "../model/Item"; // Adjust the import if necessary
+import { CustomerContext } from "../component/CustomerProvider";
+import { ItemContext } from "../component/ItemProvider";
+// import { Customer } from "../model/Customer";
+// import { Item } from "../model/Item";
 
 export function Dashboard() {
     const customerContext = useContext(CustomerContext);

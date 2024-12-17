@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 import { useContext, useState } from "react";
-import { ItemContext } from "../component/ItemProvider"; // Adjust the import path if necessary
-import { Item } from "../model/Item"; // Adjust the import path if necessary
+import { ItemContext } from "../component/ItemProvider";
+import { Item } from "../model/Item";
 
 export function UpdateItem() {
     const navigate = useNavigate();
@@ -20,8 +20,8 @@ export function UpdateItem() {
     function handleRowClick(item: Item) {
         setName(item.name);
         setDescription(item.description);
-        setPrice(item.price.toString()); // Ensure price is a string for input
-        setQuantity(item.quantity.toString()); // Ensure quantity is a string for input
+        setPrice(item.price.toString());
+        setQuantity(item.quantity.toString());
     }
 
     // Function to update the item
@@ -30,7 +30,7 @@ export function UpdateItem() {
             item.name === name ? { ...item, description, price: parseFloat(price), quantity: parseInt(quantity) } : item
         );
         setItems(updatedItems);
-        navigate("/"); // Redirect after update
+        navigate("/");
     }
 
     return (

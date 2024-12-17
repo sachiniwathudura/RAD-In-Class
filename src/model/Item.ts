@@ -1,13 +1,15 @@
 export class Item {
     name: string;
-    price: string;
-    qty: bigint;
+    description : string;
+    price: number;
+    quantity: number;
 
 
-    constructor(name: string, price: string, qty: bigint) {
+    constructor(name: string,description: string, price: number, quantity: number) {
         this.name = name;
+        this.description= description;
         this.price = price;
-        this.qty = qty;
+        this.quantity = quantity;
     }
 
 }

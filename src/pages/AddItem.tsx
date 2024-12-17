@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router"; // Ensure this matches your router setup
+import { useNavigate } from "react-router";
 import { useContext, useState } from "react";
-import { Item } from "../model/Item"; // Adjust the import path as necessary
-import { ItemContext } from "../component/ItemProvider"; // Adjust the import path as necessary
+import { Item } from "../model/Item";
+import { ItemContext } from "../component/ItemProvider";
 
 export function AddItem() {
     const navigate = useNavigate();
@@ -19,9 +19,9 @@ export function AddItem() {
     const [quantity, setQuantity] = useState(0);
 
     function handleSubmit() {
-        const newItem = new Item(name, description, price, quantity); // Assuming Item has these properties
+        const newItem = new Item(name, description, price, Number(quantity));
         setItems([...items, newItem]);
-        navigate("/"); // Redirect to the dashboard or desired route after adding the item
+        navigate("/");
     }
 
     return (

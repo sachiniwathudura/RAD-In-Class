@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router";
-import { ItemContext } from "../component/ItemProvider"; // Adjust the import path if necessary
+import { ItemContext } from "../component/ItemProvider";
 
 export function DeleteItem() {
     const context = useContext(ItemContext);
@@ -9,12 +9,12 @@ export function DeleteItem() {
         throw new Error("ItemContext must be used within an ItemProvider");
     }
 
-    const { setItems, items } = context; // Get the setItems function and current items
+    const { setItems, items } = context;
     const navigate = useNavigate();
 
-    function handleDeleteItem(itemName) {
+    function handleDeleteItem({itemName}: { itemName: any }) {
         setItems((prevItems) => prevItems.filter(item => item.name !== itemName)); // Delete the item by name
-        navigate("/"); // Redirect after deletion
+        navigate("/");
     }
 
     return (
@@ -38,7 +38,7 @@ export function DeleteItem() {
                         <td>{item.price}</td>
                         <td>{item.quantity}</td>
                         <td>
-                            <button onClick={() => handleDeleteItem(item.name)}>Delete</button>
+                            <button onClick={() => handleDeleteItem({itemName: {itemName: item.name}})}>Delete</button>
                         </td>
                     </tr>
                 ))}
