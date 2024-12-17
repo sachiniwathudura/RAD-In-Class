@@ -26,13 +26,13 @@ export function AddItem() {
 
     return (
         <div>
-            <header><h1>Add Item</h1></header>
+            <header><h2>Add Item</h2></header>
             <br />
             <input name="Name" type="text" placeholder="Item Name" onChange={(e) => setName(e.target.value)} />
             <input name="Description" type="text" placeholder="Description" onChange={(e) => setDescription(e.target.value)} />
             <input name="Price" type="number" placeholder="Price" onChange={(e) => setPrice(Number(e.target.value))} />
             <input name="Quantity" type="number" placeholder="Quantity" onChange={(e) => setQuantity(Number(e.target.value))} />
-            <br />
+            <br /> <br/>
             <button onClick={handleSubmit}>Add</button>
             <table border={1} cellPadding="8" style={{ marginTop: "20px" }}>
                 <thead>

@@ -35,13 +35,14 @@ export function UpdateItem() {
 
     return (
         <div>
-            <header>Update Item</header>
+            <h2>Update Item</h2>
             <br />
             <input name="Name" type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
             <input name="Description" type="text" placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} />
             <input name="Price" type="text" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
             <input name="Quantity" type="text" placeholder="Quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
             <br />
+            <br/>
             <button onClick={handleUpdateItem}>Update</button>
             <br />
             <table border={1} cellPadding="8" style={{ marginTop: "20px" }}>

@@ -98,14 +98,14 @@ export function UpdateCustomer() {
 
     return (
         <div>
-            <header>Update Customer</header>
+            <h2>Update Customer</h2>
             <br />
             <input name="Name" type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)}/>
             <input name="Address" type="text" placeholder="Address" value={address} onChange={(e) => setAddress(e.target.value)}/>
             <input name="Email" type="text" placeholder="Email" value={email}/>
             <input name="Phone" type="text" placeholder="Phone" value={phone} onChange={(e) => setPhone(e.target.value)}/>
-            <br />
-            <button onClick={handleUpdateCustomer} >Update</button>
+            <br /> <br/>
+            <button onClick={handleUpdateCustomer}  >Update</button>
             <br />
             <table border={1} cellPadding="8" style={{ marginTop: "20px" }}>
                 <thead>

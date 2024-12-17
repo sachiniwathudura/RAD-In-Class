@@ -26,13 +26,13 @@ export function AddCustomer() {
 
     return (
         <div>
-            <header><h1>Add Customer</h1></header>
+            <header><h2>Add Customer</h2></header>
             <br/>
             <input name="Name" type="text" placeholder="Name" onChange={(e) => setName(e.target.value)}/>
             <input name="Address" type="text" placeholder="Address" onChange={(e) => setAddress(e.target.value)}/>
             <input name="Email" type="text" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
             <input name="Phone" type="text" placeholder="Phone" onChange={(e) => setPhone(e.target.value)}/>
-            <br/>
+            <br/> <br/>
             <button onClick={handleSubmit}>Add</button>
             <table border={1} cellPadding="8" style={{marginTop: "20px"}}>
                 <thead>
